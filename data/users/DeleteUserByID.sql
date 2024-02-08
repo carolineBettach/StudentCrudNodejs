@@ -1,0 +1,1 @@
+DELETE FROM tbluser WHERE ID=@id
