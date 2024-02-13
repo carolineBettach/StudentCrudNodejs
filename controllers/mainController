@@ -1,0 +1,18 @@
+'use strict';
+
+const mainData = require('../data/main');
+
+const getAllStationsNum = async (req, res, next) => {
+    try {
+        const stationsNumlist = await mainData.getStationsNum();
+        res.send(stationsNumlist);
+    } catch (error) {
+        res.status(400).send(error.message);
+    }
+}
+
+
+module.exports = {
+    getAllStationsNum
+   
+}
